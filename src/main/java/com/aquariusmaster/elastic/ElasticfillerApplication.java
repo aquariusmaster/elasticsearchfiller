@@ -39,7 +39,7 @@ public class ElasticfillerApplication {
 
 	}
 
-	@Scheduled(fixedDelay = 2000)
+	@Scheduled(fixedDelay = 5000)
 	public void scheduler(){
 
 		LOGGER.info("Scheduler started");
@@ -65,7 +65,6 @@ public class ElasticfillerApplication {
 				e1.printStackTrace();
 			}
 		}
-
 
 	}
 

@@ -17,6 +17,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.DependsOn;
 import org.springframework.core.env.Environment;
 import org.springframework.data.elasticsearch.core.ElasticsearchOperations;
 import org.springframework.data.elasticsearch.core.ElasticsearchTemplate;
@@ -53,12 +54,13 @@ public class ApplicationConfig {
                                     InetAddress.getByName(environment.getProperty("elasticsearch.host")),
                                     Integer.parseInt(environment.getProperty("elasticsearch.port"))));
         } catch (Exception e) {
-            e.printStackTrace();
+            LOGGER.error("get NodeClient exception", e);
         }
         return client;
     }
 
     @Bean
+    @DependsOn("client")
     public ElasticsearchOperations elasticsearchTemplate() {
         return new ElasticsearchTemplate(getNodeClient());
     }
