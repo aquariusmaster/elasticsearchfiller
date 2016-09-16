@@ -5,22 +5,21 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.junit4.SpringRunner;
 
-//@RunWith(SpringJUnit4ClassRunner.class)
-//@SpringApplicationConfiguration(classes = {ElasticfillerApplication.class, ApplicationConfig.class} )
 @RunWith(SpringRunner.class)
-@SpringBootTest
+//@SpringBootTest
 public class ElasticfillerApplicationTests {
 
-	@Autowired
-	private ElasticsearchCrudRepository repository;
+	//@Autowired
+	//private ElasticsearchCrudRepository repository;
+
 
 	@Test
 	public void contextLoads() {
 	}
 
+/*
 	@Test
 	public void elasticsearchTest() {
 
@@ -34,5 +33,6 @@ public class ElasticfillerApplicationTests {
 
 		repository.save(user);
 	}
+	*/
 
 }
