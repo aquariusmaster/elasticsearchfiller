@@ -48,7 +48,7 @@ dependencies {
 
 	compile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '1.4.0.RELEASE'
 
-	compile group: 'com.github.docker-java', name: 'docker-java', version: '3.0.6'
+	compile group: 'com.github.docker-java', name: 'docker-java', version: '3.0.0'
 
 }
 
